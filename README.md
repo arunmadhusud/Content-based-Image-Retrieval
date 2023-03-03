@@ -64,7 +64,10 @@ For "readfile.cpp", following are the options for feature type.
 * "hm" is to use single normalized color histogram for whole image as features
 * "chm" is to use single normalized color histogram for middle 200*200 * pixels as features
 * "ts" is to use whole image texture histogram based on sobel magnitude and orientation as features.
-* "mct" is to use combination of "hm" and "ts" for middle portion of image as features
+* "mct" is to use combination of "hm" and "ts" for middle portion of image as features.
+* "tl" is to use whole image texture histogram based on laws filters as features.
+* "gf" is to use whole image texture histogram based on gabor filters as features.
+* "sv" is to use single normalized histogram based on the spatial variance of color as features.
 
 
 For "feature.cpp", following are the options for feature type.
@@ -77,19 +80,10 @@ For "feature.cpp", following are the options for feature type.
 For "feature.cpp", following are the options for distance metric type. 
  * "sq" for sum of squared difference.
  * "hi" for histogram instersection. 
+ * "tl": Use texture (based on laws filters) and color histogram for matching. Use histogram instersection ("hi") as distance metric for better results.
+ * "gf": Use texture (based on gabor filters) and color histogram for matching. Use histogram instersection ("hi") as distance metric for better results.
+ * "sv": Use spatial variance of color and  color histogram. Use histogram instersection ("hi") as distance metric  for better results
 
-### Run the extensions
-
-For "readfile.cpp", following are the options for feature type.
-
-* "tl" is to use whole image texture histogram based on laws filters as features.
-* "gf" is to use whole image texture histogram based on gabor filters as features.
-* "sv" is to use single normalized histogram based on the spatial variance of color as features.
-
-For "feature.cpp", following are the options for feature type.
-* "tl": Use texture (based on laws filters) and color histogram for matching. Use histogram instersection ("hi") as distance metric for better results.
-* "gf": Use texture (based on gabor filters) and color histogram for matching. Use histogram instersection ("hi") as distance metric for better results.
-* "sv": Use spatial variance of color and  color histogram. Use histogram instersection ("hi") as distance metric  for better results
 
 ## Acknowledgements
 
@@ -99,4 +93,4 @@ For "feature.cpp", following are the options for feature type.
 
 [3] Laws filter, https://courses.cs.washington.edu/courses/cse455/09wi/Lects/lect12.pdf
 
-## No of Extension Days Used : 1
+
